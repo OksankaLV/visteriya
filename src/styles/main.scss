@@ -1,0 +1,23 @@
+@import './variables';
+@import './hero.scss';
+@import './buttons';
+@import './typography';
+@import './about.scss';
+@import './gallery.scss';
+@import './masterClass.scss';
+@import './contact.scss';
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;;
+  background-color: #fff;;
+  color: #333;
+  // color: #2a2a4f;
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
+}

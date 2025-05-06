@@ -1,0 +1,23 @@
+.gallery{
+    padding: 4rem 2rem;
+    background-color: $color-secondary;
+    text-align: center;
+
+    .keen-slider {
+        max-width: 960px;
+        margin: 0 auto;
+
+        &__slide{
+            img {
+                width: 100%;
+                border-radius: $radius;
+                height: auto;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+
+    .button{
+        margin-top: 2rem;
+    }
+}

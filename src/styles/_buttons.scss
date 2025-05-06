@@ -1,0 +1,30 @@
+@import './variables';
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: $color-button;
+  color: $color-button-text;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background-color: $color-button-hover;
+      color: $color-text-dark;
+    }
+  }
+}
