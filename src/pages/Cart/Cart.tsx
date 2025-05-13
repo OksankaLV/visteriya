@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Cart.scss";
 import { RootState } from "../../redux/store";
@@ -29,7 +29,7 @@ const Cart = () => {
       tel,
       comment,
     };
-    if (items.length !== 0) {
+    if (items.length === 0) {
       alert("Додайте товари в замовлення");
       return;
     }

@@ -1,11 +1,11 @@
-@import './variables.scss';
+@use './variables';
 
 .hero{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: $color-background;
+    background-color: variables.$color-background;
     text-align: center;
     padding: 0 20px;
     position: relative;
@@ -26,25 +26,25 @@
     &__title {
         font-size: 3rem;
         margin-bottom: 1rem;
-        color: $color-primary;
+        color: variables.$color-primary;
     }
 
     &__subtitle{
         font-size: 1.5rem;
         margin-bottom: 2rem;
-        color: $color-text-dark;
+        color: variables.$color-text-dark;
     }
 
     &__btn{
         padding: 0.75rem 1.5rem;
-        background-color: $color-button;
-        color: $color-button-text;
+        background-color: variables.$color-button;
+        color: variables.$color-button-text;
         text-decoration: none;
-        border-radius: $radius;
-        transition: background-color $transition;
+        border-radius: variables.$radius;
+        transition: background-color variables.$transition;
 
         &:hover{
-            background-color: $color-button-hover;
+            background-color: variables.$color-button-hover;
         }
     }
     &__wave {

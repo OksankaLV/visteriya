@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MasterClass: React.FC = () => {
   return <section className="master-class">
@@ -10,7 +11,7 @@ const MasterClass: React.FC = () => {
       <li>Секрети оформлення і композиції</li>
       <li>Сертифікат після закінчення</li>
     </ul>
-    <button className="button">Дізнатися більше</button>
+    <Link to="./visteriya/workshops" className="button" >Дізнатися більше</Link>
 
   </section>
 }

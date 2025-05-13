@@ -13,7 +13,7 @@ export const bouquets = [
     name: "Фруктово-дитячий",
     categories: ["Фруктові", "Дитячі"],
     price: 1000,
-    image: "../bucket/bucket_5.jpg",
+    image: "bucket/bucket_5.jpg",
     description: "Пізніше тут буде опис даного букету",
   },
   {
@@ -21,21 +21,21 @@ export const bouquets = [
     name: "Мармишка",
     categories: ["Маршмалоу", "Дитячі"],
     price: 800,
-    image: "../bucket/bucket_1.jpg",
+    image: "bucket/bucket_1.jpg",
   },
   {
     id: 3,
     name: "М'ясний",
     categories: ["М'ясний", "Чоловічі"],
     price: 2000,
-    image: "../bucket/bucket_4.jpg",
+    image: "bucket/bucket_4.jpg",
   },
   {
     id: 4,
     name: "Дитячий букет",
     categories: ["Букети", "Дитячі"],
     price: 1000,
-    image: "../bucket/bucket_2.jpg",
+    image: "bucket/bucket_2.jpg",
     description:
       "ndjvnsdhviusdv diuvhiusdhv ysudyvuysdgvuysdg vgusydgv uysdg vygsduyvg usdgvuysdgvuyudusuyguys ysudgv uysgdv uysdvguy dvgsdgvusydvg ysdgv sdv",
   },
@@ -44,6 +44,6 @@ export const bouquets = [
     name: "Коробочка",
     categories: ["В коробці"],
     price: 1500,
-    image: "../bucket/bucket_3.jpg",
+    image: "bucket/bucket_3.jpg",
   },
 ];

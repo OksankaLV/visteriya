@@ -1,5 +1,6 @@
 import React from 'react'
 import aboutImage from '../assets/about.jpg'
+import { Link } from 'react-router-dom'
 
 const About: React.FC = () => {
   return <section className="about">
@@ -15,7 +16,7 @@ const About: React.FC = () => {
           Обирайте для подарунка, події чи просто — щоб порадувати себе. 
           Замовлення 2-3 дні до дати. Доставка таксі, кур'єр.
         </p>
-        <a href="/gallery" className='button'>Переглянути букети</a>
+        <Link to="./gallery" className='button'>Переглянути букети</Link>
       </div>
       <div className='about__image'>
         <img src={aboutImage} alt="Засновниця Vistery" />

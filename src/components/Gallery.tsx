@@ -2,6 +2,7 @@ import React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Gallery: React.FC = () => {
@@ -36,10 +37,10 @@ const Gallery: React.FC = () => {
   }, [instanceRef])
 
   const images = [
-    { src: '/bucket/bucket_1.jpg', alt: 'Букет 1' },
-    { src: '/bucket/bucket_2.jpg', alt: 'Букет 2' },
-    { src: '/bucket/bucket_3.jpg', alt: 'Букет 3' },
-    { src: '/bucket/bucket_4.jpg', alt: 'Букет 4' },
+    { src: './bucket/bucket_1.jpg', alt: 'Букет 1' },
+    { src: './bucket/bucket_2.jpg', alt: 'Букет 2' },
+    { src: './bucket/bucket_3.jpg', alt: 'Букет 3' },
+    { src: './bucket/bucket_4.jpg', alt: 'Букет 4' },
   ];
 
   return (<section className="gallery">
@@ -52,7 +53,7 @@ const Gallery: React.FC = () => {
       ))}
 
     </div>
-    <a href="/gallery" className='button'> Переглянути всі </a>
+    <Link to="./gallery" className='button'> Переглянути всі </Link>
   </section>)
 }
 

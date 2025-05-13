@@ -1,7 +1,5 @@
 import "./MasterClassesPage.scss";
 
-import React from "react";
-
 const MasterClassesPage = () => {
   return (
     <div className="master-classes">

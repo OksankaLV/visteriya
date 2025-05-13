@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { text } from 'stream/consumers';
 
 dotenv.config();
 const app = express();
@@ -16,19 +15,16 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 console.log('token from', process.env.TELEGRAM_BOT_TOKEN)
 
 app.post('/send-order', async (req, res) => {
-  console.log('BODY:', req.body)
+  
   const { items, message } = req.body;
 
   if (!items || !Array.isArray(items)) {
     return res.status(400).send('Некоректні дані: items')
   }
   
-  
-
   const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
   try {
-    console.log('telegram url:' , url)
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -45,11 +41,10 @@ app.post('/send-order', async (req, res) => {
       throw new Error(`Telegram error: ${ data.description }`)
     }
     res.status(200).send('Ok')
-    //res.json({ ok: true, data });
+    
   } catch (error) {
     console.error('Помилка надсилання в Телеграм', error.message);
     res.status(500).send('Помилка надсилання')
-   // res.status(500).json({ ok: false, error: error.message });
   }
 });
 
