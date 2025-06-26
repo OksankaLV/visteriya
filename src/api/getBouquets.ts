@@ -5,10 +5,10 @@ import { Bouquet } from "../data/bouquets";
 export async function getBouquets(): Promise<Bouquet[]> {
     const query = `*[_type == "bouquet"]{
         _id,
-        title,
+        name,
         description,
         price,
-        category,
+        categories,
         image}`
 
         const data = await client.fetch(query)
@@ -21,12 +21,11 @@ export async function getBouquets(): Promise<Bouquet[]> {
 export async function getBouquetById(id:string|undefined): Promise<Bouquet[]> {
     const query = `*[_type == "bouquet" && _id == $id]{
         _id,
-        title,
+        name,
         description,
         price,
-        category,
-        image
-        }`
+        categories,
+        image}`
 
         return await client.fetch(query, {id})
         
