@@ -11,7 +11,7 @@ const MasterClass: React.FC = () => {
       <li>Секрети оформлення і композиції</li>
       <li>Сертифікат після закінчення</li>
     </ul>
-    <Link to="./visteriya/workshops" className="button" >Дізнатися більше</Link>
+    <Link to="./workshops" className="button" >Дізнатися більше</Link>
 
   </section>
 }

@@ -13,7 +13,9 @@
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    padding: 0 1.5rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    
 
     @media (max-width: 350px) {
         width: 100%;
@@ -33,10 +35,15 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        padding-bottom: env(safe-area-inset-bottom);
          textarea{
             margin: 5px;
             width: 100%
         };
+        h4,p{
+            margin: 0;
+        }
+        
        }
     &.open {
             transform: translateX(0);

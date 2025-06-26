@@ -1,0 +1,47 @@
+.adminPage{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.addBouquetForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+    }
+
+    input[type='text'],
+    textarea,
+    input[type='file'] {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .imagePreview img {
+        max-width: 100%;
+        margin-top: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        align-self: flex-start;
+        padding: 0.75rem 1.5rem;
+        background-color: #a07e91;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: #8a667b;
+        }
+    } }

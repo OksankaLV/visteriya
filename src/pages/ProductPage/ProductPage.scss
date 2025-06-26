@@ -25,6 +25,9 @@
         font-weight: bold;
         position: absolute;
         left: 20px;
+        @media (max-width: 600px){
+            display: none;
+        }
 
         &:hover{
             background-color: #ddd;

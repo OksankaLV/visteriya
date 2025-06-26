@@ -19,7 +19,7 @@ const Cart = () => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-  const [tel, setTel] = useState("");
+  const [tel, setTel] = useState("+380");
   const [comment, setComment] = useState("");
   const telReq = /^\+380\d{9}$/;
   const handleSubmitOrder = async () => {

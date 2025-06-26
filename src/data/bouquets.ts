@@ -1,5 +1,5 @@
 export interface Bouquet {
-  id: number;
+  _id: string | undefined;
   name: string;
   image: string;
   price: number;
@@ -9,7 +9,7 @@ export interface Bouquet {
 
 export const bouquets = [
   {
-    id: 1,
+    _id: '1',
     name: "Фруктово-дитячий",
     categories: ["Фруктові", "Дитячі"],
     price: 1000,
@@ -17,21 +17,21 @@ export const bouquets = [
     description: "Пізніше тут буде опис даного букету",
   },
   {
-    id: 2,
+    _id: '2',
     name: "Мармишка",
-    categories: ["Маршмалоу", "Дитячі"],
+    categories: ["Маршмеллоу", "Дитячі"],
     price: 800,
     image: "bucket/bucket_1.jpg",
   },
   {
-    id: 3,
+    _id: '3',
     name: "М'ясний",
     categories: ["М'ясний", "Чоловічі"],
     price: 2000,
     image: "bucket/bucket_4.jpg",
   },
   {
-    id: 4,
+    _id: '4',
     name: "Дитячий букет",
     categories: ["Букети", "Дитячі"],
     price: 1000,
@@ -40,7 +40,7 @@ export const bouquets = [
       "ndjvnsdhviusdv diuvhiusdhv ysudyvuysdgvuysdg vgusydgv uysdg vygsduyvg usdgvuysdgvuyudusuyguys ysudgv uysgdv uysdvguy dvgsdgvusydvg ysdgv sdv",
   },
   {
-    id: 5,
+    _id: '5',
     name: "Коробочка",
     categories: ["В коробці"],
     price: 1500,
