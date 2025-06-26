@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
-import { Bouquet, bouquets } from "../../data/bouquets";
+import { Bouquet } from "../../data/bouquets";
 import { useNavigate } from "react-router-dom";
 import "./ProductPage.scss";
 import { toggleCart } from "../../redux/cartSlice";

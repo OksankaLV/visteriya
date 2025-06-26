@@ -64,7 +64,7 @@ const Cart = () => {
           ) : (
             <ul>
               {items.map((item) => (
-                <li key={item.id}>
+                <li key={item._id}>
                   <p>
                     {item.name}{" "}
                     <button
