@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
-import { Bouquet } from "../../data/bouquets";
+import { Bouquet, bouquets } from "../../data/bouquets";
 import { useNavigate } from "react-router-dom";
 import "./ProductPage.scss";
 import { toggleCart } from "../../redux/cartSlice";
@@ -14,14 +14,15 @@ function ProductPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [product, setProduct] = useState<Bouquet>()
+  const [product, setProduct] = useState<Bouquet|null>()
 
   // const product: Bouquet | undefined = bouquets.find(
   //   (p) => p._id === id
   // );
   useEffect(()=>{
-  })
-    getBouquetById(id).then(data=>setProduct(data[0]));
+    getBouquetById(id).then(bouquets=>setProduct(bouquets[0]));
+  },[])
+    
 
   if (!product) {
     return <div>Товар не знайдено</div>;

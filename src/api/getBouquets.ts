@@ -20,12 +20,13 @@ export async function getBouquets(): Promise<Bouquet[]> {
 }
 export async function getBouquetById(id:string|undefined): Promise<Bouquet[]> {
     const query = `*[_type == "bouquet" && _id == $id]{
-        _id
+        _id,
         title,
         description,
         price,
         category,
-        image}[0]`
+        image
+        }`
 
         return await client.fetch(query, {id})
         
