@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
-import { categories } from "../../data/categories";
+//import { categories } from "../../data/categories";
 import "./GalleryPage.scss";
 import { toggleCart } from "../../redux/cartSlice";
-import { Bouquet } from "../../data/bouquets";
+import { Bouquet, Category } from "../../data/bouquets";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { Link } from "react-router-dom";
 import { getBouquets } from "../../api/getBouquets";
 import { urlFor } from "../../imageUrl";
+import  { getCategories } from '../../api/getCategories';
+
 
 const GalleryPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
   const dispatch = useDispatch();
 
   const [bouquets, setBouquets] = useState<Bouquet[]>([])
+  const [categories, setCategories]=useState<Category[]>([])
 
   function handleFilterClick(category: string): void {
     if (category === "Усі") {
@@ -32,20 +35,26 @@ const GalleryPage = () => {
     dispatch(toggleCart());
   }
 
-  const filter = categories.map((category) => (
+  const filter = [
     <button
-      key={category}
-      onClick={() => handleFilterClick(category)}
+      key="Усі"
+      onClickCapture={()=>handleFilterClick("Усі")}
+      className={selectedCategory.length === 0 ? 'active' : ""}>
+        Усі
+      </button>,
+        ...categories.map((category) => (
+          <button
+      key={category._id}
+      onClick={() => handleFilterClick(category.title)}
       className={
-        selectedCategory.includes(category) ||
-        (category === "Усі" && selectedCategory.length === 0)
+        selectedCategory.includes(category.title)
           ? "active"
           : ""
       }
     >
-      {category}
+      {category.title}
     </button>
-  ));
+  ))];
 
   const filteredBouquets =
     selectedCategory.length === 0
@@ -53,20 +62,22 @@ const GalleryPage = () => {
       : bouquets.filter((bouquet) =>
           //           bouquet.categories.some((category)=>selectedCategory.includes(category))
           selectedCategory.every((selected) =>
-            bouquet.categories.includes(selected)
+            
+            bouquet.categories?.some(cat => cat.title === selected)
           )
         );
 
 
       useEffect(()=>{
-        getBouquets().then(setBouquets).catch(()=>{
-          import('../../data/bouquets').then((mod)=>{
-            setBouquets(mod.bouquets)
-          })
-        })  
+        getBouquets().then(setBouquets).catch((err)=>{console.error("помилка завантаження із Sanity", err )})
+        getCategories().then(setCategories).catch((err)=>{console.log("не вдалося отримати категорії", err)})
+        // catch(()=>{
+        //   import('../../data/bouquets').then((mod)=>{
+        //     setBouquets(mod.bouquets)
+        //   })
+        // })  
       }, [])
 
-      console.log(bouquets)
   return (
     <section className="gallery-page">
       <h1>Галерея букетів</h1>

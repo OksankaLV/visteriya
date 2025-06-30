@@ -1,10 +1,15 @@
+export interface Category {
+  _id: string,
+  title: string
+}
+
 export interface Bouquet {
   _id: string | undefined;
   name: string;
   image: string;
   price: number;
   description?: string;
-  categories: string[];
+  categories: Category[];
 }
 
 export const bouquets = [

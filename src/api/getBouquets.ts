@@ -8,7 +8,7 @@ export async function getBouquets(): Promise<Bouquet[]> {
         name,
         description,
         price,
-        categories,
+        categories[]->{_id, title},
         image}`
 
         const data = await client.fetch(query)
@@ -24,7 +24,7 @@ export async function getBouquetById(id:string|undefined): Promise<Bouquet[]> {
         name,
         description,
         price,
-        categories,
+        categories[]->{_id,title},
         image}`
 
         return await client.fetch(query, {id})
