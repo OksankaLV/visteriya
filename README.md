@@ -1,56 +1,36 @@
-# React + TypeScript + Vite
+# Visteriya — Food Floristics Website 🌸🍓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive frontend website for a small food floristics business.  
+The project presents bouquet collections, descriptions, and visual content in a clean and user-friendly layout.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+👉 https://oksankalv.github.io/visteriya/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **React**
+- **TypeScript**
+- **Vite**
+- **SCSS**
+- **HTML5**
 
-## Expanding the ESLint configuration
+## ✨ Features
+- Responsive layout (desktop & mobile)
+- Product cards with images and descriptions
+- Clean component-based architecture
+- Reusable UI components
+- Basic state management
+- Semantic HTML and modern CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Project Structure
+- `components/` — reusable UI components
+- `pages/` — main pages
+- `styles/` — global and modular styles
+- `assets/` — images and static files
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+## 🎯 Purpose of the project
+This project was created as a **real small business website** to practice React + TypeScript and build a portfolio-ready frontend application.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
-
-# visteriya
+## 🚀 Getting Started
+```bash
+npm install
+npm run dev
